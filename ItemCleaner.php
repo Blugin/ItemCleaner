@@ -20,7 +20,7 @@ class Main extends \pocketmine\plugin\PluginBase{
 	public $time = 0;
 	public $count = 0;
 	public function onEnable(){
-		$this->getServer()->getScheduler()->scheduleRepeatingTask(new class($this) extends \pocketmine\scheduler\Task{
+		$this->getScheduler()->scheduleRepeatingTask(new class($this) extends \pocketmine\scheduler\Task{
 			public $owner;
 			public function __construct(Main $owner){
 				$this->owner = $owner;
