@@ -5,7 +5,7 @@
  * @main ItemCleaner\Main
  * @author BLEAN
  * @version 1.1
- * @api 3.0.1
+ * @api 4.0.0
  */
 
 namespace ItemCleaner;
