@@ -1,0 +1,5 @@
+name: ItemCleaner
+main: ItemCleaner\Loader
+author: BLEAN
+version: '1.0'
+api: 4.0.0
