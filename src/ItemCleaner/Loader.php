@@ -4,6 +4,8 @@ namespace ItemCleaner;
 
 use pocketmine\plugin\PluginBase;
 
+use pocketmine\uitls\Config;
+
 use ItemCleaner\Task\CheckTask;
 
 class Loader extends PluginBase{
