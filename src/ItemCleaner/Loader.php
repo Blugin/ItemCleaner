@@ -4,7 +4,7 @@ namespace ItemCleaner;
 
 use pocketmine\plugin\PluginBase;
 
-use pocketmine\uitls\Config;
+use pocketmine\utils\Config;
 
 use ItemCleaner\Task\CheckTask;
 
