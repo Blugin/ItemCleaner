@@ -1,7 +1,7 @@
 name: ItemCleaner
 main: ItemCleaner\Loader
 author: BLEAN
-version: '1.1'
+version: '1.2'
 api: 
 - 3.0.0
 - 3.0.1
