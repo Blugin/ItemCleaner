@@ -11,6 +11,7 @@ class Loader extends PluginBase{
 	public $prefix = '§d[ §fCleaner §d]§f ';
 
 	public function onEnable(): void {
+		$this->saveDefaultConfig();
 		$this->reloadConfig();
 		
 		$this->getScheduler()->scheduleRepeatingTask(new CheckTask($this), 20 * 60);
