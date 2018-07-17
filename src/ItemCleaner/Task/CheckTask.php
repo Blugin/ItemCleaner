@@ -26,10 +26,10 @@ class CheckTask extends Task{
             $this->owner->getServer()->broadcastMessage($this->owner->prefix . 'Items will be removed after §d' . --$this->time . '§f minute.');
         }else{
 			$entityCount = 0;
-            foreach ($this->owner->getServer()->getLevels() as $levels){
-                foreach($levels->getEntities() as $entities){
-                    if (!$entities instanceof Creature && !$entities instanceof Human){
-                        $entities->close();
+            foreach ($this->owner->getServer()->getLevels() as $level){
+                foreach($level->getEntities() as $entity){
+                    if (!$entity instanceof Creature && !$entity instanceof Human){
+                        $entity->close();
                         ++$entityCount;
                     }
                 }
