@@ -19,7 +19,7 @@ class CheckTask extends Task{
 
     public function __construct(Loader $owner){
         $this->owner = $owner;
-        $this->time = $this->owner->db['config']['time'];
+		$this->time = (int) $this->owner->getConfig()->get('time');
     }
     public function onRun(int $currentTick){
         if ($this->time != 0){
@@ -35,7 +35,7 @@ class CheckTask extends Task{
                 }
             }
             $this->owner->getServer()->broadcastMessage($this->owner->prefix . '§d' . $entityCount . ' §fItems have been deleted.');
-            $this->time = $this->owner->db['config']['time'];
+			$this->time = (int) $this->owner->getConfig()->get('time');
         }
     }
 }

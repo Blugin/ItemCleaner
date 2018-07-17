@@ -14,7 +14,6 @@ class Loader extends PluginBase{
 
 	public function onEnable(): void {
 		$this->reloadConfig();
-		$this->db['config'] = $this->getConfig()->getAll();
 		
 		$this->getScheduler()->scheduleRepeatingTask(new CheckTask($this), 20 * 60);
 	}
