@@ -2,9 +2,7 @@
 
 namespace ItemCleaner\Task;
 
-use pocketmine\entity\Creature;
-use pocketmine\entity\Human;
-
+use pocketmine\entity\object\ItemEntity;
 use pocketmine\scheduler\Task;
 
 use ItemCleaner\Loader;
@@ -28,7 +26,7 @@ class CheckTask extends Task{
 			$entityCount = 0;
             foreach ($this->owner->getServer()->getLevels() as $level){
                 foreach($level->getEntities() as $entity){
-                    if (!$entity instanceof Creature && !$entity instanceof Human){
+                    if ($entity instanceof ItemEntity){
                         $entity->close();
                         ++$entityCount;
                     }
